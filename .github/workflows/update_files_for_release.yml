@@ -17,8 +17,8 @@ on:
         required: true
         type: string
       BETA_VERSION:
-        description: 'Enter new version'
-        default: '23.0.0.13-beta'
+        description: 'Enter beta version'
+        default: '24.0.0.1'
         type: string
       BUILD_LABEL:
         description: 'Enter build label of release driver'
