@@ -49,7 +49,7 @@ for file in $(find ./releases/latest ./releases/$NEW_VERSION -name Dockerfile.*)
 
 done
 
-# Update the .travis.yml file, which isn't used anymore so why do we keep it around? :(
+# Update the .travis.yml file.
 sed -i'.bak' -e "s/RELEASE=\.\.\/releases\/$OLD_VERSION/RELEASE=\.\.\/releases\/$VERSION/" .travis.yml;
 
 # Update the images.txt filecp ./releases/$OLD_VERSION/images.txt ./releases/$NEW_VERSION/images.txt;
