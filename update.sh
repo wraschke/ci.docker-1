@@ -51,11 +51,7 @@ for file in $(find ./releases/latest ./releases/$NEW_VERSION -name Dockerfile.*)
 done
 
 # Update the .travis.yml file.
-if test -f ./.travis.yml;
-then 
-    echo ".travis.yml exists"
-fi
-sed -i'.bak' -e "s/$OLD_VERSION/$NEW_VERSION/g" ./.travis.yml;
+sed -i'.bak' -e "s/RELEASE=\.\.\/releases\/$OLD_VERSION/RELEASE=\.\.\/releases\/$NEW_VERSION/" ./.travis.yml;
 rm ./.travis.yml.bak;
 
 # Update the images.txt file
