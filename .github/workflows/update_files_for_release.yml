@@ -44,10 +44,6 @@ jobs:
         ref: vNext
         repository: wraschke/ci.docker-1
 
-    - name: Listing files on runner
-      run: |
-        ls -al
-
     - name: Run update.sh script
       run: bash ./update.sh ${{ inputs.OLD_VERSION }} ${{ inputs.NEW_VERSION }} ${{ inputs.BETA_VERSION }} ${{ inputs.BUILD_LABEL }}
 
