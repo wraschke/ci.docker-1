@@ -41,11 +41,11 @@ jobs:
     - name: Check out repository code to runner
       uses: actions/checkout@v4
       with:
-        ref: vNext
-        repository: OpenLiberty/ci.docker
+        ref: update-script-needed-vNext
+        repository: wraschke/ci.docker-1
 
     - name: Run update.sh script
-      run: bash ./update.sh ${{ inputs.OLD_VERSION }} ${{ inputs.NEW_VERSION }} ${{ inputs.BUILD_LABEL }}
+      run: bash ./update.sh ${{ inputs.OLD_VERSION }} ${{ inputs.NEW_VERSION }} ${{ inputs.BETA_VERSION }} ${{ inputs.BUILD_LABEL }}
 
     - name: Commit changes
       uses: EndBug/add-and-commit@v9
