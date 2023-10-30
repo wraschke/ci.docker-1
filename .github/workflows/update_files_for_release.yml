@@ -41,7 +41,7 @@ jobs:
     - name: Check out repository code to runner
       uses: actions/checkout@v4
       with:
-        ref: update-script-needed-vNext
+        ref: vNext
         repository: wraschke/ci.docker-1
 
     - name: Run update.sh script
